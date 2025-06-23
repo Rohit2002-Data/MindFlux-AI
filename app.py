@@ -15,7 +15,6 @@ from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
 from sklearn.metrics import accuracy_score, r2_score
-from xgboost import XGBClassifier, XGBRegressor
 from streamlit_chat import message
 import google.generativeai as genai
 import io
@@ -93,7 +92,6 @@ if file:
             models = {
                 "RandomForest": RandomForestClassifier(),
                 "LogisticRegression": LogisticRegression(max_iter=1000),
-                "XGBoost": XGBClassifier(use_label_encoder=False, eval_metric='logloss'),
                 "KNN": KNeighborsClassifier(),
                 "DecisionTree": DecisionTreeClassifier(),
                 "GradientBoosting": GradientBoostingClassifier(),
@@ -105,7 +103,6 @@ if file:
             models = {
                 "RandomForest": RandomForestRegressor(),
                 "LinearRegression": LinearRegression(),
-                "XGBoost": XGBRegressor(),
                 "KNN": KNeighborsRegressor(),
                 "DecisionTree": DecisionTreeRegressor(),
                 "GradientBoosting": GradientBoostingRegressor(),
