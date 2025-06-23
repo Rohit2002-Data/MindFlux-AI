@@ -7,8 +7,7 @@ from sklearn.impute import SimpleImputer, KNNImputer
 from sklearn.ensemble import (
     RandomForestClassifier, RandomForestRegressor,
     GradientBoostingClassifier, GradientBoostingRegressor,
-    AdaBoostClassifier, AdaBoostRegressor,
-    BaggingClassifier, BaggingRegressor
+    AdaBoostClassifier, AdaBoostRegressor
 )
 from sklearn.linear_model import LogisticRegression, LinearRegression
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
@@ -96,7 +95,6 @@ if file:
                 "DecisionTree": DecisionTreeClassifier(),
                 "GradientBoosting": GradientBoostingClassifier(),
                 "AdaBoost": AdaBoostClassifier(),
-                "Bagging": BaggingClassifier(),
                 "GaussianNB": GaussianNB()
             }
         else:
@@ -106,8 +104,7 @@ if file:
                 "KNN": KNeighborsRegressor(),
                 "DecisionTree": DecisionTreeRegressor(),
                 "GradientBoosting": GradientBoostingRegressor(),
-                "AdaBoost": AdaBoostRegressor(),
-                "Bagging": BaggingRegressor()
+                "AdaBoost": AdaBoostRegressor()
             }
 
         results = {}
