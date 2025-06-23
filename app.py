@@ -147,11 +147,11 @@ if file:
 
                 full_response = f"{prediction}\n\n🧠 *Why this model?*\n{explanation}"
                 st.session_state.chat_history.append({"user": user_input, "ai": full_response})
-                st.experimental_rerun()
+                st.rerun()
 
             except Exception as e:
                 st.session_state.chat_history.append({"user": user_input, "ai": f"❌ Error: {str(e)}"})
-                st.experimental_rerun()
+                st.rerun()
 
         # ---- Display chat messages with feedback buttons ----
         for i, chat in enumerate(st.session_state.chat_history):
@@ -168,7 +168,7 @@ if file:
         # ---- Clear chat history ----
         if st.button("🗑️ Clear Chat"):
             st.session_state.chat_history = []
-            st.experimental_rerun()
+            st.rerun()
 
         # ---- Export chat as CSV ----
         if st.button("📥 Download Chat as CSV"):
